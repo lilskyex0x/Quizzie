@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quizzie</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="index.js" defer></script>
 </head>
 <body>
     <header id="header">
@@ -13,19 +13,22 @@
     </header>
     <main id="quiz__container">
         <section id="quiz__question">
-            <h2 id="question">
+            <h2 class="question">
                 <!-- empty question -->
             </h2>
         </section>
         <ul id="choices">
             <!-- empty choices -->
         </ul>
-        <button id="Next">Next</button>
+        <div id="action__btns">
+            <button class="previous">Previous</button>
+            <button class="next">Next</button>
+        </div>
     </main>
-    <section id="quiz__progress" style="display: none;">
+    <section id="quiz__progress">
         <h3>Quiz results</h3>
-        <p>Your Score: <span id="score">0</span></p>
-        <button id="reset__btn">Restart Quiz</button>
+        <p>Your Score: <span class="score">0</span></p>
+        <button class="reset__btn">Restart Quiz</button>
     </section>
 </body>
 </html>
