@@ -44,7 +44,7 @@ body {
     margin-top: 20px;
 }
 
-#choices {
+.answer__choices {
     columns: 2;
     -webkit-columns: 2;
     -moz-columns: 2;
