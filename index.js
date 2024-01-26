@@ -54,7 +54,6 @@ const nextQuestion = () => {
       "input[name='answer']:checked"
     );
     const correctAnswer = questions[currentQuestionIndex].correct_answer;
-    console.log("correctAnswer", correctAnswer);
 
     if (checkedAnswer === null) return alert("Please select an answer");
 
