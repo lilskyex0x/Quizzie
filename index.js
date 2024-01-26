@@ -1,4 +1,4 @@
-const api =
+const api_URL =
   "https://opentdb.com/api.php?amount=10&difficulty=easy&type=multiple";
 
 const previousBtn = document.querySelector(".previous");
@@ -6,20 +6,23 @@ const userScore = document.querySelector(".score");
 const questionText = document.querySelector(".question");
 const resetBtn = document.querySelector(".reset__btn");
 const nextBtn = document.querySelector(".next");
-const answerChoices = document.querySelector("#choices");
 
 let questions = {};
 let currentQuestionIndex = 0;
 let questionsDiv = "";
 
 window.onload = async () => {
-  const response = await fetch(api);
+  const response = await fetch(api_URL);
   const data = await response.json();
 
   init(data);
   nextQuestion();
   previousQuestion();
   resetQuiz();
+};
+
+const renderQuestion = () => {
+  questionText.innerHTML = questionsDiv[currentQuestionIndex];
 };
 
 const init = (data) => {
@@ -51,14 +54,13 @@ const nextQuestion = () => {
       "input[name='answer']:checked"
     );
     const correctAnswer = questions[currentQuestionIndex].correct_answer;
+    console.log("correctAnswer", correctAnswer);
 
     if (checkedAnswer === null) return alert("Please select an answer");
 
-    if (checkedAnswer.value === correctAnswer) {
-      userScore.innerHTML++;
-    } else {
-      userScore.innerHTML--;
-    }
+    checkedAnswer.value === correctAnswer
+      ? userScore.innerHTML++
+      : userScore.innerHTML--;
 
     if (currentQuestionIndex < questions.length - 1) {
       currentQuestionIndex++;
@@ -83,8 +85,4 @@ const resetQuiz = () => {
     location.reload();
     renderQuestion();
   });
-};
-
-const renderQuestion = () => {
-  questionText.innerHTML = questionsDiv[currentQuestionIndex];
 };
