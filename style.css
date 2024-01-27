@@ -26,6 +26,7 @@ body {
     max-width: 80%;
     background-color: bisque;
     height: 60vh;
+    gap: 20px;
     box-shadow: 0 0 5px 4px;
     display: flex;
     flex-direction: column;
@@ -33,6 +34,21 @@ body {
     align-items: center;
     border-radius: 8px;
     text-align: center;
+}
+
+#quiz__question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 89%;
+}
+
+.question__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
 }
 
 #quiz__progress {
@@ -44,10 +60,56 @@ body {
     margin-top: 20px;
 }
 
+.question__container {
+    background-color: aqua;
+    height: 100%;
+}
+
 .answer__choices {
+    margin: 0 40px 0 40px;
+    gap: 20px;
     columns: 2;
     -webkit-columns: 2;
     -moz-columns: 2;
+}
+
+.answer__choice {
+    border: 1px solid olivedrab;
+    padding: 10px;
+    margin-bottom: 19px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid olivedrab;
+    border-radius: 50%;
+    background-color: white;
+}
+
+input[type="radio"]:checked+label:after {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    background: #000;
+    border-radius: 50%;
 }
 
 .previous,
