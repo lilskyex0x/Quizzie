@@ -35,13 +35,25 @@ const init = (data) => {
 
     return `
     <div class="question__container">
-    <h3 class="question">${question.question}</h3>
-    <ul class="answer__choices">
-    <li class="answer__choice"><input type="radio" name="answer" value="${allAnswers[0]}"/>${allAnswers[0]}</li>
-    <li class="answer__choice"><input type="radio" name="answer" value="${allAnswers[1]}"/>${allAnswers[1]}</li>
-    <li class="answer__choice"><input type="radio" name="answer" value="${allAnswers[2]}"/>${allAnswers[2]}</li>
-    <li class="answer__choice"><input type="radio" name="answer" value="${allAnswers[3]}"/>${allAnswers[3]}</li>
-    </ul>
+      <h3 class="question">${question.question}</h3>
+      <ul class="answer__choices">
+      <li class="answer__choice">
+        <input type="radio" name="answer" value="${allAnswers[0]}"/>
+        <label for="answer">${allAnswers[0]}</label><br>
+      </li>
+      <li class="answer__choice">
+        <input type="radio" name="answer" value="${allAnswers[1]}"/>
+        <label for="answer">${allAnswers[1]}</label><br>
+      </li>
+      <li class="answer__choice">
+        <input type="radio" name="answer" value="${allAnswers[2]}"/>
+        <label for="answer">${allAnswers[2]}</label><br>
+      </li>
+      <li class="answer__choice">
+        <input type="radio" name="answer" value="${allAnswers[3]}"/>
+        <label for="answer">${allAnswers[3]}</label><br>
+      </li>
+      </ul>
     </div>
     `;
   });
