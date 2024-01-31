@@ -41,7 +41,6 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    height: 89%;
 }
 
 .question__container {
@@ -60,11 +59,6 @@ body {
     margin-top: 20px;
 }
 
-.question__container {
-    background-color: aqua;
-    height: 100%;
-}
-
 .answer__choices {
     margin: 0 40px 0 40px;
     gap: 20px;
@@ -77,39 +71,6 @@ body {
     border: 1px solid olivedrab;
     padding: 10px;
     margin-bottom: 19px;
-}
-
-input[type="radio"] {
-    display: none;
-}
-
-label {
-    position: relative;
-    padding-left: 30px;
-    cursor: pointer;
-}
-
-label::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: -2px;
-    width: 20px;
-    height: 20px;
-    border: 1px solid olivedrab;
-    border-radius: 50%;
-    background-color: white;
-}
-
-input[type="radio"]:checked+label:after {
-    content: "";
-    position: absolute;
-    left: 8px;
-    top: 6px;
-    width: 8px;
-    height: 8px;
-    background: #000;
-    border-radius: 50%;
 }
 
 .previous,
