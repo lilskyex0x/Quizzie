@@ -73,8 +73,16 @@ body {
     margin-bottom: 19px;
 }
 
+#action__btns {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
 .previous,
 .next {
+    width: 70%;
     font-size: large;
     font-weight: bold;
     box-shadow: 0 6px 12px -2px rgba(#f27813, .15);
@@ -84,6 +92,11 @@ body {
     color: bisque;
     margin: 6px;
     cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.previous:hover, .next:hover {
+    background: #f27813;
 }
 
 .reset__btn {
